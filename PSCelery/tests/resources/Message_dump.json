@@ -1,0 +1,85 @@
+{
+    "timestamp": "2017-01-19 10:37:17:303",
+    "type":"received",
+    "node":"rabbit@3a3913778865",
+    "connection":"172.17.0.6:54844 -> 172.17.0.2:5672",
+    "vhost":"/","user":"guest","channel":1,"exchange":"",
+    "queue":"workflow",
+    "routed_queues":"none",
+    "routing_keys":["workflow"],
+    "properties":{
+        "reply_to":"3abdf873-d3f8-310d-bb09-4d5c6a1629b0",
+        "correlation_id":"e8ec6bb7-5c9b-4155-ad34-1d6bfe940b1f",
+        "priority":0,
+        "delivery_mode":2,
+        "headers":{
+            "timelimit":["undefined","undefined"],
+            "eta":"undefined",
+            "origin":"gen20372@DEV-C-Eugene",
+            "retries":0,
+            "kwargsrepr":"{}",
+            "root_id":"e8ec6bb7-5c9b-4155-ad34-1d6bfe940b1f",
+            "parent_id":"undefined",
+            "group":"undefined",
+            "lang":"py",
+            "argsrepr":"('meow',)",
+            "task":"wf_worker.celery_app.respond",
+            "expires":"undefined",
+            "id":"e8ec6bb7-5c9b-4155-ad34-1d6bfe940b1f"
+        },
+        "content_encoding":"utf-8",
+        "content_type":"application/json"
+    },
+    "payload":"W1sibWVvdyJdLCB7fSwgeyJlcnJiYWNrcyI6IG51bGwsICJjaGFpbiI6IG51bGwsICJjYWxsYmFja3MiOiBbeyJrd2FyZ3MiOiB7fSwgImNob3JkX3NpemUiOiBudWxsLCAidGFzayI6ICJ3Zl93b3JrZXIuY2VsZXJ5X2FwcC5jYWxsYmFjayIsICJhcmdzIjogW10sICJpbW11dGFibGUiOiBmYWxzZSwgIm9wdGlvbnMiOiB7InF1ZXVlIjogIndvcmtmbG93In0sICJzdWJ0YXNrX3R5cGUiOiBudWxsfV0sICJjaG9yZCI6IG51bGx9XQ==",
+    "payload_d64decoded":[
+        ["meow"],
+        {},
+        {
+            "errbacks": null, "chain": null, 
+            "callbacks": [{
+                "kwargs": {}, 
+                "chord_size": null, 
+                "task": "wf_worker.celery_app.callback", 
+                "args": [], 
+                "immutable": false, 
+                "options": {"queue": "workflow"}, 
+                "subtask_type": null}
+            ], 
+            "chord": null
+        }]
+}
+
+{
+    "timestamp":"2017-01-19 10:37:27:329","type":"published","node":"rabbit@3a3913778865","connection":"172.17.0.6:54868 -> 172.17.0.2:5672","vhost":"/","user":"guest","channel":1,"exchange":"workflow","queue":"none","routed_queues":["workflow"],"routing_keys":["workflow"],
+    "properties":{
+        "reply_to":"79f20285-c781-3858-b2e5-93191b89507c","correlation_id":"7966e6d0-4926-463f-9700-05d1855de8a8","delivery_mode":2,"headers":{},"content_encoding":"utf-8","content_type":"application/json"
+    },
+    "payload":"eyJjYWxsYmFja3MiOiBudWxsLCAicmV0cmllcyI6IDAsICJldGEiOiBudWxsLCAia3dhcmdzIjoge30sICJhcmdzIjogWyI8UmVzcG9uZCgpOiBSZWNlaXZlZCBpbnB1dDogbWVvdz4iXSwgImV4cGlyZXMiOiBudWxsLCAiaWQiOiAiNzk2NmU2ZDAtNDkyNi00NjNmLTk3MDAtMDVkMTg1NWRlOGE4IiwgInRhc2siOiAid2Zfd29ya2VyLmNlbGVyeV9hcHAuY2FsbGJhY2siLCAidXRjIjogdHJ1ZSwgImNob3JkIjogbnVsbCwgInRpbWVsaW1pdCI6IFtudWxsLCBudWxsXSwgImVycmJhY2tzIjogbnVsbCwgInRhc2tzZXQiOiBudWxsfQ==",
+    "payload_b64decoded": {
+        "callbacks": null,
+        "retries": 0, 
+        "eta": null, 
+        "kwargs": {}, 
+        "args": ["<Respond(): Received input: meow>"], 
+        "expires": null, 
+        "id": "7966e6d0-4926-463f-9700-05d1855de8a8", 
+        "task": "wf_worker.celery_app.callback", 
+        "utc": true, 
+        "chord": null, 
+        "timelimit": [null, null], 
+        "errbacks": null, 
+        "taskset": null}
+}
+
+{
+    "timestamp":"2017-01-19 10:37:27:329","type":"received","node":"rabbit@3a3913778865","connection":"172.17.0.6:54844 -> 172.17.0.2:5672","vhost":"/","user":"guest","channel":1,"exchange":"workflow","queue":"workflow","routed_queues":"none","routing_keys":["workflow"],
+    "properties":{
+        "reply_to":"79f20285-c781-3858-b2e5-93191b89507c","correlation_id":"7966e6d0-4926-463f-9700-05d1855de8a8","delivery_mode":2,"headers":{},"content_encoding":"utf-8","content_type":"application/json"},"payload":"eyJjYWxsYmFja3MiOiBudWxsLCAicmV0cmllcyI6IDAsICJldGEiOiBudWxsLCAia3dhcmdzIjoge30sICJhcmdzIjogWyI8UmVzcG9uZCgpOiBSZWNlaXZlZCBpbnB1dDogbWVvdz4iXSwgImV4cGlyZXMiOiBudWxsLCAiaWQiOiAiNzk2NmU2ZDAtNDkyNi00NjNmLTk3MDAtMDVkMTg1NWRlOGE4IiwgInRhc2siOiAid2Zfd29ya2VyLmNlbGVyeV9hcHAuY2FsbGJhY2siLCAidXRjIjogdHJ1ZSwgImNob3JkIjogbnVsbCwgInRpbWVsaW1pdCI6IFtudWxsLCBudWxsXSwgImVycmJhY2tzIjogbnVsbCwgInRhc2tzZXQiOiBudWxsfQ==",
+        "payload_b64decoded": {
+            "callbacks": null, "retries": 0, "eta": null, "kwargs": {}, 
+            "args": ["<Respond(): Received input: meow>"], "expires": null, 
+            "id": "7966e6d0-4926-463f-9700-05d1855de8a8", 
+            "task": "wf_worker.celery_app.callback", 
+            "utc": true, "chord": null, 
+            "timelimit": [null, null], "errbacks": null, "taskset": null}
+    }

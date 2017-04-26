@@ -1,0 +1,5 @@
+cd \src
+. .\PSCelery\PSCelery\examples\Demo1\App.ps1
+$verbosePreference = 'Continue'
+$debugPreference = 'Continue'
+$app.TaskRegistry.Mul.apply($null,@(2,2),@{})

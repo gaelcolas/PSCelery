@@ -1,0 +1,9 @@
+BROKER_URL = 'amqp://guest@10.111.111.116//'
+CELERY_RESULT_BACKEND = 'rpc://guest@10.111.111.116//'
+
+QUEUE_NAME = 'config_data_compilation'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TIMEZONE = 'Europe/London'
+CELERY_ENABLE_UTC = True

@@ -1,0 +1,6 @@
+﻿class CelerySignature : hashtable {
+    
+    CelerySignature() {
+        
+    }
+}
